@@ -24,4 +24,5 @@ $body = '{
    }
 }'
 
-Invoke-WebRequest -Uri "http://localhost:$PORT/predict" -Method "POST" -ContentType "application/json" -Body $body
+$result = Invoke-WebRequest -Uri "http://localhost:$PORT/predict" -Method "POST" -ContentType "application/json" -Body $body
+$result.Content
